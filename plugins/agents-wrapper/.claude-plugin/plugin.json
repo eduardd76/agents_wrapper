@@ -1,0 +1,31 @@
+{
+  "name": "agents-wrapper",
+  "displayName": "Agents Wrapper",
+  "version": "0.1.0",
+  "description": "Get second opinions from OpenAI, Gemini, the Claude API, or local-operator and compare their answers side by side",
+  "author": {
+    "name": "Eduard Dulharu"
+  },
+  "repository": "https://github.com/eduardd76/agents_wrapper",
+  "keywords": ["multi-agent", "second-opinion", "openai", "gemini", "compare"],
+  "userConfig": {
+    "openai_api_key": {
+      "type": "string",
+      "title": "OpenAI API key",
+      "description": "Optional. Leave blank to use OPENAI_API_KEY from your environment.",
+      "sensitive": true
+    },
+    "google_api_key": {
+      "type": "string",
+      "title": "Google AI API key",
+      "description": "Optional. Leave blank to use GOOGLE_API_KEY from your environment.",
+      "sensitive": true
+    },
+    "anthropic_api_key": {
+      "type": "string",
+      "title": "Anthropic API key",
+      "description": "Optional. Only needed to include a separate Claude API call in comparisons. Leave blank to use ANTHROPIC_API_KEY.",
+      "sensitive": true
+    }
+  }
+}

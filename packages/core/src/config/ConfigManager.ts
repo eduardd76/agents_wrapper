@@ -141,14 +141,18 @@ export class ConfigManager {
       gemini: 'gemini',
     };
 
-    const configKey = agentConfigs[agentName];
+    const configKey = agentConfigs[agentName] as
+      | 'anthropic'
+      | 'openai'
+      | 'gemini'
+      | undefined;
     if (!configKey) {
       throw new Error(`Unknown agent: ${agentName}`);
     }
 
     // Update in-memory config
-    this.config[configKey as keyof OrchestratorConfig] = {
-      ...(this.config[configKey as keyof OrchestratorConfig] as AgentConfig),
+    this.config[configKey] = {
+      ...this.config[configKey],
       apiKey,
     };
 

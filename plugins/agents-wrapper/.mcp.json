@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "orchestrator": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/index.cjs"],
+      "env": {
+        "AGENTS_WRAPPER_OPENAI_API_KEY": "${user_config.openai_api_key}",
+        "AGENTS_WRAPPER_GOOGLE_API_KEY": "${user_config.google_api_key}",
+        "AGENTS_WRAPPER_ANTHROPIC_API_KEY": "${user_config.anthropic_api_key}",
+        "NODE_NO_WARNINGS": "1"
+      }
+    }
+  }
+}

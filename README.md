@@ -144,6 +144,23 @@ pnpm cli config --validate
 pnpm cli config --set claude
 ```
 
+## Claude Code Plugin
+
+The orchestrator also ships as a Claude Code plugin, so Claude can ask OpenAI, Gemini, the Claude API, or local-operator for a second opinion from inside a session.
+
+```bash
+/plugin install agents-wrapper --marketplace eduardd76/agents_wrapper
+```
+
+Or in two steps:
+
+```bash
+/plugin marketplace add eduardd76/agents_wrapper
+/plugin install agents-wrapper@agents-wrapper-tools
+```
+
+See [plugins/agents-wrapper/README.md](plugins/agents-wrapper/README.md) for configuration and development.
+
 ## Programmatic Usage
 
 ```typescript
