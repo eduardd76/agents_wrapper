@@ -1,0 +1,14 @@
+{
+  "name": "agents-wrapper-tools",
+  "description": "Claude Code plugins from the agents_wrapper repository",
+  "owner": {
+    "name": "Eduard Dulharu"
+  },
+  "plugins": [
+    {
+      "name": "agents-wrapper",
+      "source": "./plugins/agents-wrapper",
+      "description": "Second opinions from OpenAI, Gemini, the Claude API, or local-operator, compared side by side"
+    }
+  ]
+}
